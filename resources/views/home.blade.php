@@ -21,7 +21,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+                    @foreach($trains as $train)
+                        {{ $train->azienda }} - {{ $train->codice_treno }}
+                    @endforeach
                 </div>
             </div>
 
