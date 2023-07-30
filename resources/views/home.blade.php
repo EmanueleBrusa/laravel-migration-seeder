@@ -20,10 +20,38 @@
     <main class="bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    @foreach($trains as $train)
-                        {{ $train->azienda }} - {{ $train->codice_treno }}
-                    @endforeach
+                <h1 class="text-center">TRENITALIA</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-5 mb-5">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Azienda</th>
+                                <th>Codice Treno</th>
+                                <th>Stazione Partenza</th>
+                                <th>Stazione Arrivo</th>
+                                <th>Data Partenza</th>
+                                <th>Data Arrivo</th>
+                                <th>Orario Partenza</th>
+                                <th>Orario Arrivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($trains as $train)
+                                <tr>
+                                    <td>{{ $train->azienda }}</td>
+                                    <td>{{ $train->codice_treno }}</td>
+                                    <td>{{ $train->stazione_partenza }}</td>
+                                    <td>{{ $train->stazione_arrivo }}</td>
+                                    <td>{{ $train->data_partenza }}</td>
+                                    <td>{{ $train->data_arrivo }}</td>
+                                    <td>{{ $train->orario_partenza }}</td>
+                                    <td>{{ $train->orario_arrivo }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
