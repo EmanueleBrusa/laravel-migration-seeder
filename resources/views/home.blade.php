@@ -35,6 +35,7 @@
                                 <th>Data Arrivo</th>
                                 <th>Orario Partenza</th>
                                 <th>Orario Arrivo</th>
+                                <th>In Orario</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,6 +49,11 @@
                                     <td>{{ $train->data_arrivo }}</td>
                                     <td>{{ $train->orario_partenza }}</td>
                                     <td>{{ $train->orario_arrivo }}</td>
+                                    @if($train->in_orario)
+                                        <td>Sì</td>
+                                    @else
+                                        <td>In Ritardo</td>
+                                    @endif
                                 </tr>
                             @endforeach
                         </tbody>
