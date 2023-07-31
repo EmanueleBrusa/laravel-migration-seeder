@@ -23,6 +23,11 @@
                 <h1 class="text-center">TRENITALIA</h1>
             </div>
             <div class="row">
+                <div class="col-12 text-center mt-5 mb-1">
+                    <h4>Treni in partenza oggi:</h4>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12 mt-5 mb-5">
                     <table class="table table-bordered table-striped">
                         <thead>
@@ -60,7 +65,7 @@
                     </table>
                 </div>
             </div>
-
+            <a href="{{ route('stazioni') }}">Vedi tutte le stazioni</a>
         </div>
     </main>
 
